@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript" type="text/javascript">
+        //... operator
+        function fun(a, b, ...c) {
+            console.log(a)
+            console.log(b)
+            console.log(c)
+        }
+        fun(1, 2, 3, 4, 5)
+
+        //spread
+        const arr = [2, 1]
+        const arr1 = [3, 4, 5]
+        const narr = [arr, arr1]
+        const narr1 = [...arr, ...arr1]
+        console.log(narr)
+        console.log(narr1)
+        console.log(...narr1)
+        var obj = { ...narr }
+        console.log(obj)
+
+        //default parameter
+        /*
+        function func(a, b) {
+            let add = a + b
+            return add
+        }
+        console.log(func(2, 3))
+        */
+        function func(a, b = 10) {
+            return a + b
+        }
+
+        //warn
+        console.log(func(2, undefined))
+        function warn() {
+            alert("I am alert box")
+            document.writeln("i appear after alert")
+        }
+
+        //confirm
+        function func1() {
+            var data = confirm("Do you Agree?")
+            if (data == true) {
+                alert("user agree")
+                console.log("user maan gaya")
+            }
+            else {
+                alert("user disagree")
+                console.log("user didn't agree")
+            }
+        }
+
+        //prompt
+        function funp() {
+            const data = prompt('Enter detail', 'username')
+            document.writeln(`username:${data}`)
+        }
+        funp()
+
+        function foo(bg, tx, size = '10px', st = 'italic') {
+            i = document.getElementById('a')
+            i.style.color = tx
+            i.style.backgroundColor = bg
+            i.style.fontSize = size
+            i.style.fontStyle = st
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="alert button" onclick="warn()">
+    <input type="button" value="confirm button" onclick="func1()">
+    <p id="a">Hello world</p>
+    <input type="submit" value="click here" onclick="foo('tomato','cyan')">
+</body>
+
+</html>
