@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p class="b">I am outside tag</p>
+    <div>
+        <p>
+            I am inside div
+        </p>
+        <h4>
+            i am heading
+        </h4>
+    </div>
+    <button onclick="fun()">click me</button>
+    <script language="javascript" type="text/javascript">
+        function fun() {
+            let i = document.querySelector('div p')
+            //i[0].innerHTML = "How are you?"
+            i.style.color = 'tomato';
+            i.style.backgroundColor = 'cyan';
+            i.style.textTransform = 'uppercase';
+        }
+
+    </script> -->
+
+    <!-- <img id="a">
+    <button onclick="func()">Add image</button>
+    <script language="javascript" type="text/javascript">
+        function func() {
+            let i = document.getElementById('a')
+            i.setAttribute("src", "img.png")
+        }
+    </script>    -->
+    <p id="a" title="special case">ABC</p>
+    <script language="javascript" type="text/javascript">
+        document.getElementById('a').removeAttribute('title')
+        alert(document.getElementById('a').getAttribute('title'))
+    </script>
+</body>
+
+</html>

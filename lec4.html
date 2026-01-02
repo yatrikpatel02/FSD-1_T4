@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- DOM (Document Object Model) -->
+    <!-- <p id="a" onclick="fun()">Hello</p>
+    <button onclick="fun()">Click me</button>
+    <script language="javascript" type="text/javascript">
+        function fun() {
+            /*
+            let i = document.getElementById('a')
+            i.innerHTML = "<b>Welcome 2k26</b>"
+            //i.innerText="<b>Welcome 2k26</b>"
+            */
+            let j = document.querySelector('#a')
+            j.innerHTML = "<b>Welcome 2k26</b>"
+        }
+    </script> -->
+    <!-- <p class="b">Hello</p>
+    <p class="b">Hii</p>
+    <button onclick="fun()">click me</button>
+    <script language="javascript" type="text/javascript">
+        function fun() {
+            //let i = document.getElementsByClassName('b')
+            let i = document.querySelectorAll('.b')
+            //i[0].innerHTML = "How are you?"
+            for (let p of i) {
+                p.innerHTML = "Welcome";
+                p.style.color = 'tomato';
+                p.style.backgroundColor = 'cyan';
+            }
+        }
+
+    </script> -->
+
+    <!-- <p id="a" title="special case">ABC</p>
+    <script language="javascript" type="text/javascript">
+        document.getElementById('a').removeAttribute('title')
+        alert(document.getElementById('a').getAttribute('title'))
+    </script> -->
+
+    <!-- <p style="color: aqua;" id="a">Hello 2k26</p>
+    <button onclick="fun()">Toggle</button>
+    <script language="javascript" type="text/javascript">
+        function fun() {
+            //let i = document.getElementsByClassName('b')
+            let i = document.getElementById('a')
+            if (i.style.backgroundColor == 'black') {
+                i.style.backgroundColor = 'tomato'
+            }
+            else {
+                i.style.backgroundColor = 'black'
+            }
+        }
+
+    </script> -->
+
+    <!-- <img id="a" src="img.png" onclick="fun()">
+    <script language="javascript" type="text/javascript">
+        function fun() {
+            //let i = document.getElementsByClassName('b')
+            let i = document.getElementById('a');
+            if (i.getAttribute('src') === "img.png") {
+                i.setAttribute('src', "img1.png");
+            }
+            else {
+                i.setAttribute('src', "img.png");
+            }
+            //or
+            /*
+            i.onclick = () => {
+                i.setAttribute("src", i.getAttribute("src") === "img.png" ? "img1.png" : "img.png")
+            }
+            */
+
+
+        }
+    </script> -->
+
+    <img id="a" src="img.png">
+    <button onclick="fun()" id="a">zoom in</button>
+    <script language="javascript" type="text/javascript">
+        function fun() {
+            //let i = document.getElementsByClassName('b')
+            let i = document.getElementById('a');
+            if (i.style.transform == 'scale(0.5,0.5)') {
+                i.innerHTML = "zoom in"
+                i.style.transform = 'scale(2,2)'
+            }
+            else {
+                i.innerHTML = "zoom out"
+                i.style.transform = "scale(0.5,0.5)"
+            }
+            //or
+            /*
+            i.onclick = () => {
+                i.setAttribute("src", i.getAttribute("src") === "img.png" ? "img1.png" : "img.png")
+            }
+            */
+
+
+        }
+    </script>
+</body>
+
+</html>
