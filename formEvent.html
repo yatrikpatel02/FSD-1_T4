@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" onfocus="this.style.backgroundColor='yellow'">
+    <input type="text" oninput="this.value=this.value.toLowerCase()">
+    <input type="text" onblur="this.style.color='Green'">
+    <form action="#" onsubmit="fun()">
+        <input type="text" id="a" name="fname">
+        <input type="text" name="lname">
+        <input type="submit">
+    </form>
+    <script language="javascript" type="text/javascript">
+        function fun() {
+            let data = document.getElementById('a').value
+            alert('welcome ' + data)
+        }
+    </script>
+</body>
+
+</html>

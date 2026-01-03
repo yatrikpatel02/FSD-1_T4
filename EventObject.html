@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onkeydown="fun2(event)">
+    <select onchange="fun1(event)">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+
+    </select>
+    <div onmousedown="fun3(event)" style="height: 100px;width:100px; background-color:blue"></div>
+    <form action="img.png" onsubmit="fun4(event)">
+        <input type="submit">
+    </form>
+    <script language="javascript" type="text/javascript">
+        function fun1(e) {
+            alert(e.target.value)
+            alert(e.target.tagName)
+            alert(e.type)
+        }
+        function fun2(e) {
+            alert("key present " + e.keyCode)
+        }
+        function fun3(e) {
+            let val = e.button
+            switch (val) {
+                case 0: alert('left click')
+                    break;
+                case 1: alert('middle click')
+                    break;
+                case 2: alert('Right click')
+            }
+        }
+        function fun4(e) {
+            // e.preventDefault()
+            alert("Will not allow to submit")
+        }
+    </script>
+</body>
+
+</html>
