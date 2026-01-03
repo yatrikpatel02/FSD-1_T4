@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- <body onkeydown="fun3(this)" onkeypress="fun4(this)"> -->
+<!-- <p id="demo">Hello</p>
+    <div onmouseover="this.style.color='tomato'">Hiiiii</div>
+    <div onmouseout="this.style.color='blue'">How are you</div>
+    <div onmousedown="fun(this)" onmouseup="fun2(this)" style="height: 100px; width:100px;background-color:pink;">you
+        are okay</div>
+    <script language="javascript" type="text/javascript">
+        i = document.querySelector('#demo')
+        i.addEventListener('click', show)
+        function show() {
+            alert("Event Blind On click")
+        }
+
+        // or
+        //i.addEventListener('click', function () { alert("I am called") })
+
+        function fun(e) {
+            e.innerHTML = 'On Button Press'
+            e.style.backgroundColor = 'cyan'
+        }
+        function fun2(e) {
+            e.innerHTML = 'On Button Release'
+            e.style.backgroundColor = 'grey'
+        }
+        function fun3(e) {
+            e.bgColor = 'cyan'
+        }
+        function fun4(e) {
+            e.bgColor = 'green'
+        }
+    </script> 
+</body>-->
+
+<body>
+    <!-- write a task to perform following events : if the mouse is on heading it should turn yellow if mouse goes out it should turn black 2. if button named find time is clicked then show date and time information 3. if button named red is clicked then background color of body should turn red and button named green is clcicked then bg color should turn green -->
+    <h onmouseover="func1(this)" onmouseout="func2(this)">Heading 1</h>
+    <p id="a"></p>
+    <button onclick="func3(this)">find time</button>
+    <button onclick="func4(body)">Red</button>
+    <button onclick="func5(body)">Green</button>
+    <script language="javascript" type="text/javascript">
+        function func1(e) {
+            e.style.color = 'yellow'
+        }
+        function func2(e) {
+            e.style.color = 'black'
+        }
+        function func3(e) {
+            let d = new Date()
+            document.getElementById('a').innerHTML = d
+
+
+        }
+        function func4(e) {
+            e.bgColor = 'red'
+        }
+        function func5(e) {
+            e.bgColor = 'green'
+        }
+    </script>
+</body>
+
+
+</body>
+
+</html>
