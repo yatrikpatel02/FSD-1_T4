@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" name="formd" onsubmit="fun()">
+        <input type="text" name="fname" id="f1">
+        <input type="text" name="lname" id="l1">
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <script>
+        //method-1 : document.forms['formname']['fieldname'].value
+        //method-2: document.formname.fieldname.value
+        //method-3: document.getElementById('field id').value 
+        function fun() {
+            //var obj = document.formd.fname.value
+            //var obj = document.forms['formd']['fname'].value
+            var obj = document.getElementById('f1').value
+            alert("welcome " + obj)
+            var obj2 = document.forms['formd']
+            alert(obj2.length)
+        }
+    </script>
+</body>
+
+</html>
