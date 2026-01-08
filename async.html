@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const order = new Promise((resolve, reject) => {
+            let success = true;
+            setTimeout(() => {
+                if (success) {
+                    resolve("order placed")
+                }
+                else {
+                    resolve("Order cancelled")
+                }
+            })
+        }
+
+        )
+        order
+            .then(result => console.log(result))
+            .catch(result => console.log(result))
+            .finally(result => console.log("Order finished"))
+    </script>
+</body>
+
+</html>

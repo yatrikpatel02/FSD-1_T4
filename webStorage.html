@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" id="a" placeholder="Enter name">
+    <button onclick="saveu()">save</button>
+    <button onclick="showu()">show</button> 
+    <button onclick="clearu()">clear</button>
+    <p id="demo"></p>
+    <button onclick="fun()">admin</button> -->
+    <input type="text" id="a" placeholder="Enter value">
+    <input type="text" id="b" placeholder="Enter price">
+    <button onclick="saveu()">save</button>
+    <button onclick="deleteu()">delete</button>
+    <button onclick="discountu()">discount</button>
+    <p id="demo"></p>
+    <script>
+        //local storage
+        //localStorage.setItem('username', 'abc')
+
+        //let data = localStorage.getItem('username')
+        //console.log(data)
+
+        //localStorage.setItem('username', 'xyz')
+        //localStorage.setItem('uname', 'pqr')
+
+        //localStorage.removeItem('uname')
+
+        //localStorage.clear()
+
+        //session storage
+        //sessionStorage.setItem("username", "hello");
+
+        //let data = sessionStorage.getItem('username')
+        //console.log(data)
+
+        //sessionStorage.setItem('username', 'hiii')
+
+        //sessionStorage.removeItem('username')
+
+        //sessionStorage.clear();
+
+        /*
+        function saveu() {
+            let obj = document.getElementById('a').value
+            localStorage.setItem('user', obj)
+            sessionStorage.setItem('user', obj)
+        }
+        function showu() {
+            let obj = localStorage.getItem('user')
+            let obj1 = sessionStorage.getItem('user')
+            document.getElementById('demo').innerHTML = "Local storage: " + obj + "<br> session storage: " + obj1
+        }
+        function clearu() {
+            localStorage.clear()
+            sessionStorage.clear()
+        }
+        */
+
+        /*
+        localStorage.setItem('Admin', '123456')
+        function saveu() {
+            let obj = document.getElementById('a').value
+            let users = JSON.parse(localStorage.getItem('users')) || []
+            users.push(obj)
+            localStorage.setItem("users", JSON.stringify(users))
+        }
+        function showu() {
+            let users = JSON.parse(localStorage.getItem('users')) || []
+            document.getElementById('demo').innerHTML = "users:<br>" + users.join('<br>')
+        }
+        function clearu() {
+            localStorage.clear()
+            sessionStorage.clear()
+            document.getElementById('demo').innerHTML = "All clear"
+        }
+        function fun() {
+            let d = prompt("Enter admin password")
+            if (d == localStorage.getItem('Admin')) {
+                showu()
+            }
+            else {
+                alert("Invalid password")
+            }
+        }
+        */
+
+        function saveu() {
+            let obj = document.getElementById('a').value
+            let obj1 = document.getElementById('b').value
+            localStorage.setItem('name : ' + obj)
+            localStorage.setItem('Price: ' + obj1)
+        }
+        function deleteu() {
+            localStorage.clear()
+        }
+        function discountu() {
+            let a1 = document.getElementById('a').value
+            let b1 = document.getElementById('b').value
+            b1 = b1 - (b1 * 0.1)
+            localStorage.getItem(a1, b1)
+
+        }
+    </script>
+</body>
+
+</html>
